@@ -1,0 +1,437 @@
+#_next{
+height: 120rem; display: flex; flex-direction: column; align-items: center; transition: .6s;
+
+header{
+    background: var(--cor3); width: 100%; height: 4%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: .2rem; height: 8.9rem;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.137); position: fixed; z-index: 1000;transition: .6s;
+
+    .header-container{
+        max-width: 1310px; width: 100%; height: 100%; display: flex; justify-content: space-around; overflow: hidden;transition: .6s;
+
+        .access-user-header{
+            display: flex; width: 100%;
+
+
+
+
+            .hamburguer{
+                display: flex; display: none; align-items: center; justify-content: center; width: 10%; height: 100%; margin-right: 1rem; position: a;transition: .6s;
+                a{
+                    background: transparent;display: flex; justify-content: center; align-items: center; cursor: pointer; border: none; width: 50%; height: 70%;transition: .6s;
+
+                    img{
+                        background: transparent;transition: .6s;
+                    }
+                }
+                .menu-hamburguer{
+                    position: fixed; z-index: 100; background: rgb(0, 0, 0, 0.2); width: 100vw; height: 100vh; top: 0; left: 0;
+                    display: flex; justify-content: flex-end; 
+
+                    .close{
+                        height: 100%; width: 5%;
+                        button{
+                            width: 100%; height: 8%; border: none; outline: none; background: transparent; cursor: pointer;
+                            color: white; font-size: 2rem;
+                        }
+                    }
+
+                    .navbar-mobile-hamburguer{
+                        background: var(--cor3); width: 30%; text-transform: capitalize;
+
+                        .title{
+                            height: 10%;
+                            display: flex; align-items: center; justify-content: center;
+
+                            img{
+                                /* background: var(--cor5);*/ width: 35px; border-radius: 100%; 
+                            }
+                            h5{
+                                font-size: 1rem; margin-bottom: 40px; margin-left: 10px;
+                                font-weight: 700; color: var(--cor5);
+                            }
+
+                        }
+                        .navbar{
+                            height: 60%;overflow: hidden; display: flex; align-items: flex-start;
+                            overflow-y: auto; box-shadow: none;
+                            .list{
+                                scroll-behavior: auto; width: 100%; margin: 0; padding: 0;
+                            }
+                            .item{
+                                list-style: none; width: 100%; color: white; font-weight: 400; display: flex; cursor: pointer;
+                                align-items: center; justify-content: center; font-size: .9rem; height: 3rem;  text-transform: capitalize;
+                                a{width: 100%; height: 100%;}
+                            }
+                            .item:hover{
+                                background: rgba(9, 174, 240, 0.37);
+                            }
+                        }
+                        .button{
+                            height: 30%; flex-direction: column;
+                            display: flex; align-items: center; justify-content: center;
+                            button{
+                                height: 2.5rem; width: 70%; font-size: 15px;text-transform: capitalize; cursor: pointer; 
+                                a{width: 100%; height: 100%; color: white;}
+                            }
+                            .login{
+                                border: none; border-radius: 5px; background: rgb(5, 196, 230); transition: .2s;
+                                color: white; outline: none;font-weight: 500;
+                                a{text-decoration: none;}
+                            }
+                            .register{
+                                border: none; background: transparent; outline: none; margin-top: 5px;
+                                color: white; font-weight: 500; text-decoration: underline;
+                            }
+                            .login:hover{
+                                background: rgba(5, 176, 228, 0.918);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .logo{
+                display: flex; align-items: center; justify-content: center; width: 25%; overflow: hidden;transition: .6s;
+
+                img{
+                    width: 75%; border-radius: 10px 10px 20px 20px;
+                }
+            }
+
+            .form-inline{
+                display: flex; align-items: center; width: 60%; margin-left: 1rem;transition: .6s;
+                input{
+                    width: 100%;
+                    display: flex; justify-content: space-between;transition: .6s;
+                }
+                ::placeholder{
+                    color: #000000; font-weight: 400;
+                }
+                .pesquisar-header{
+                    position: absolute;transition: .6s;
+                    margin-left: 10rem;
+                }
+            }
+
+            .access-user{
+                display: flex; width: 40%; align-items: center;transition: .6s;
+                .login-register-access{
+                    display: flex; justify-content: center; align-items: center; width: 41%; color: var(--cor5);
+                    font-size: 77%; font-weight: 700%; font-weight: 800;transition: .6s;
+                    a{
+                        color: var(--cor5); text-decoration: underline; font-weight: 700;
+                    }
+
+                    .img-rgac{
+                        width: 55%; height: 100%; display: flex; align-items: center; justify-content: center;
+                        img{
+                            width: 62%;
+                        }
+
+                    }
+                }
+
+                .for-user{
+                    display: flex; align-items: center; justify-content: center;width: 50%; margin-right: 10px;transition: .6s;
+                    a{
+                        height: 100px; width: 100px; width: 20%; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-left: 1rem;
+                        img{
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        }
+        @media screen and (max-width: 970px) {
+            .header-container{
+                .access-user-header{
+                    .form-inline{
+                        width: 57%;
+
+                        input{
+                            height: 70%;
+                        }
+                    }
+                .access-user{
+                    display: none;
+                }
+                .hamburguer{
+                    display: flex; margin-inline-start: 11%;
+                }
+                }
+            }
+            .navbar{
+                display: none;
+            }
+        }
+
+    @media screen and (max-width: 853px) {
+        .button-navbar{
+                        font-size: .1rem;
+            }
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            .footer-info,
+            .footer-hours,
+            .footer-services,
+            .footer-social {
+                width: 100%;
+            }
+        }
+
+    }
+    .navbar{
+        width: 100%; display: flex; justify-content: center; padding: 0; border-top: 1px var(--cor3) solid;
+        box-shadow: 0px 2.6px 4px 1px rgba(29, 29, 29, 0.329);
+        button{
+            border: 1px;
+        }
+        .navbar-container{
+            width: 100%;max-width: 1480px; height: 3rem;padding-inline: 5px; align-items: center; justify-content: center;
+            .list-itens-navbar{
+                display: flex; width: 100%; height: 100%; padding: 0; margin: 0;
+                li{
+                    width: 50%; margin: 1px; list-style: none; display: flex; align-items: center; justify-content: center;
+                    .button-navbar{
+                            font-size: 14px;
+                            width: 100%; padding: 5px; font-weight: 600; text-decoration: none;
+                            height: 100%; display: flex; align-items: center; justify-content: center;
+                            color: var(--cor5); transition: .4s;
+                        }
+                        .button-navbar:hover{
+                            background: rgba(22, 22, 22, 0.842);
+                        }
+                }
+            }
+        }
+
+        @media screen and (max-width: 970px) {
+
+            .navbar-container{
+                box-shadow: none;
+                background-color: var(--cor3);
+
+                .list-itens-navbar{
+                    li{
+                        .button-navbar{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+body{background: var(--cor2);}
+
+          
+@media (max-width: 970px){
+    header{
+        position: relative;
+    }
+}
+
+
+ 
+main{
+    width: 100%; background: var(--cor5);transition: .6s;
+    .baner{
+        margin: 0;transition: .6s;
+    }
+    section{
+        margin-bottom: 2rem;transition: .6s;
+    }
+
+
+    .banner-principal{
+            margin-inline: 0rem;border-radius: 1px; margin-top: 9.4rem; margin-bottom: .7rem;
+        }
+
+
+        @media screen and (max-width: 940px) {
+            .banner-principal{
+                margin-top: 0;
+            }
+        }
+    h3{
+        text-align: start; padding-left: 2rem; height: 3rem;
+        display: flex; align-items: center; font-size: 170%;
+        color: var(--cor1); font-weight: 600;transition: .6s;
+    }
+
+    hr{
+        background: var(--cor1);transition: .6s;
+    }
+
+    .banner2{ 
+        .baner{width: 150px; transition: .1s;}
+        .baner:hover{
+            width: 160px;
+        }
+    }
+    .banner-principal{
+        img{cursor: pointer;}
+    }
+    .organ-div{
+        height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center;
+
+        .main-container{
+            width: 100%; height: 100%; max-width: 1280px; padding-block: 1rem; padding-inline: 1rem;
+        }
+    }
+}
+
+
+footer {
+    background: black;  z-index: 100;
+    width: 100%; color: var(--cor5); height: 100rem;  font-size: 11px;
+    display: flex; flex-direction: column;  align-items: center;
+
+
+
+    .container {
+        width: 100%; height: 100%;
+        max-width: 1350px;
+        margin:  auto;
+        border-radius: 10px;
+        box-sizing: border-box;
+
+    }
+    .participe-da-equipe{ background: linear-gradient( rgb(0, 0, 0), rgb(20, 20, 20));
+        width: 100%; display: flex; justify-content: center; align-items: center; height: 10rem; box-shadow: 1px 1px 10px 1px rgba(29, 29, 29, 0.329);
+
+        .noticia-juca{
+            width: 10rem; display: flex; justify-content: center; align-items: center;
+            margin-inline:1rem;font-weight: 600; font-size: 12px; display: flex;flex-direction:column;font-weight: 800;color:rgb(255, 255, 255);
+            span{
+                font-weight: 400; display: flex; align-items: center; justify-content: center;
+            }
+
+
+        }
+        input{
+            border: none; border-radius: 7px; font-size: 100%;
+        }
+        #text-form-footer{
+            width: 25rem; height: 3rem; padding-left: 10px; margin: 5px;
+        }
+        #email-form-footer{
+            width: 25rem; height: 3rem;padding-left: 10px; margin: 5px;
+        }
+        .button-form-footer{
+            width: 8rem; height: 3rem; border-radius: 5px; margin: 5px;  font-weight: 800; border: none; border-style: none; background: linear-gradient( rgb(1, 200, 226), rgb(4, 118, 153));
+            color: white;
+        }
+        .button-form-footer:hover{
+        background: rgb(2, 129, 151)
+        }
+    }
+
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap; height: 100%; overflow: hidden;
+        justify-content: space-between;
+
+
+        .footer-info,
+        .footer-hours,
+        .footer-services,
+        .footer-social {
+            flex: 1; background: black;
+            margin-bottom: 20px; padding: 1rem; border-radius: 1rem;
+            margin-bottom: 10px; box-shadow: 0px 0px 9px 2px rgba(177, 2, 2, 0.103);
+            font-size: 13px; display: flex; flex-direction: column;
+
+            h3{
+                font-size: 20px; color: var(--cor5); font-weight: 800;
+            }
+            p{
+                margin-top: .5rem;
+            }
+        }
+
+    }
+
+
+
+
+    .footer-services ul,
+
+    .footer-social ul {
+        list-style-type: none;
+        padding: 0;
+
+    }
+
+
+    .footer-services li,
+    .footer-social li {
+        margin-bottom: 5px;
+        list-style: none;
+
+    }
+
+
+    .footer-social li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+
+    .footer-social li:last-child {
+        margin-right: 0;
+    }
+
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: 1020px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+        }
+        .participe-da-equipe{
+            height: 90rem; padding: 1rem;
+            flex-direction: column;
+
+        .button-form-footer{
+            width: 25rem;
+            margin-bottom: 4.8rem;
+        }
+        .noticia-juca{
+            margin-top: 4rem;
+            width: 20rem;
+            font-size: 15px;
+        }
+        }
+
+        .footer-info,
+        .footer-hours,
+        .footer-services,
+        .footer-social {
+            width: 100%;
+
+        }
+    }
+
+
+}
+@media (max-width: 970px){
+    header{
+        position: relative;
+    }
+}
+
+}

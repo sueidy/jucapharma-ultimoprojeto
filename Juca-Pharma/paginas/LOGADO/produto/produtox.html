@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- UIkit Css -->
+    <link rel="" href="carrinho.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css" />
+    <!-- eu css - PRODUTO -->
+    <link rel="stylesheet" href="/css/produto-card.css">
+    <link rel="stylesheet" href="/css/naopodefaltar.css">
+</head>
+<style>
+    body{background: var(--cor2);}
+#_next{
+    height: 120rem; display: flex; flex-direction: column; align-items: center; transition: .6s;
+
+
+    header{
+    background: var(--cor3); width: 100%; height: 4%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: .2rem; height: 8.9rem;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.137); position: relative;transition: .6s;
+
+    .header-container{
+        max-width: 1310px; width: 100%; height: 100%; display: flex; justify-content: space-around; overflow: hidden;transition: .6s;
+
+        .access-user-header{
+            display: flex; width: 100%;
+
+
+
+
+            
+            .hamburguer{
+                display: flex; display: none; align-items: center; justify-content: center; width: 10%; height: 100%; margin-right: 1rem; position: a;transition: .6s;
+                a{
+                    background: transparent;display: flex; justify-content: center; align-items: center; cursor: pointer; border: none; width: 50%; height: 70%;transition: .6s;
+
+                    img{
+                        background: transparent;transition: .6s;
+                    }
+                }
+                .menu-hamburguer{
+                    position: fixed; z-index: 100; background: rgb(0, 0, 0, 0.2); width: 100vw; height: 100vh; top: 0; left: 0;
+                    display: flex; justify-content: flex-end; 
+
+                    .close{
+                        height: 100%; width: 5%;
+                        button{
+                            width: 100%; height: 8%; border: none; outline: none; background: transparent; cursor: pointer;
+                            color: white; font-size: 2rem;
+                        }
+                    }
+
+                    .navbar-mobile-hamburguer{
+                        background: var(--cor3); width: 30%; text-transform: capitalize;
+
+                        .title{
+                            height: 10%;
+                            display: flex; align-items: center; justify-content: center;
+
+                            img{
+                                /* background: var(--cor5);*/ width: 35px; border-radius: 100%; 
+                            }
+                            h5{
+                                font-size: 1rem; margin-bottom: 40px; margin-left: 10px;
+                                font-weight: 700; color: var(--cor5);
+                            }
+
+                        }
+                        .navbar{
+                            height: 60%;overflow: hidden; display: flex; align-items: flex-start;
+                            overflow-y: auto; box-shadow: none;
+                            .list{
+                                scroll-behavior: auto; width: 100%; margin: 0; padding: 0;
+                            }
+                            .item{
+                                list-style: none; width: 100%; color: white; font-weight: 400; display: flex; cursor: pointer;
+                                align-items: center; justify-content: center; font-size: .9rem; height: 3rem;  text-transform: capitalize;
+                                a{width: 100%; height: 100%;}
+                            }
+                            .item:hover{
+                                background: rgba(9, 174, 240, 0.37);
+                            }
+                        }
+                        .button{
+                            height: 30%; flex-direction: column;
+                            display: flex; align-items: center; justify-content: center;
+                            button{
+                                height: 2.5rem; width: 70%; font-size: 15px;text-transform: capitalize; cursor: pointer; 
+                                a{width: 100%; height: 100%; color: white;}
+                            }
+                            .login{
+                                border: none; border-radius: 5px; background: rgb(5, 196, 230); transition: .2s;
+                                color: white; outline: none;font-weight: 500;
+                                a{text-decoration: none;}
+                            }
+                            .register{
+                                border: none; background: transparent; outline: none; margin-top: 5px;
+                                color: white; font-weight: 500; text-decoration: underline;
+                            }
+                            .login:hover{
+                                background: rgba(5, 176, 228, 0.918);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .logo{
+                display: flex; align-items: center; justify-content: center; width: 25%; overflow: hidden;transition: .6s;
+
+                img{
+                    width: 75%; border-radius: 10px 10px 20px 20px;
+                }
+            }
+
+            .form-inline{
+                display: flex; align-items: center; width: 60%; margin-left: 1rem;transition: .6s;
+                input{
+                    width: 100%;
+                    display: flex; justify-content: space-between;transition: .6s;
+                }
+                ::placeholder{
+                    color: #000000; font-weight: 400;
+                }
+                .pesquisar-header{
+                    position: absolute;transition: .6s;
+                    margin-left: 10rem;
+                }
+            }
+
+            .access-user{
+                display: flex; width: 40%; align-items: center;transition: .6s;
+                .login-register-access{
+                    display: flex; justify-content: center; align-items: center; width: 41%; color: var(--cor5);
+                    font-size: 77%; font-weight: 700%; font-weight: 800;transition: .6s;
+                    a{
+                        color: var(--cor5); text-decoration: underline; font-weight: 700;
+                    }
+
+                    .img-rgac{
+                        width: 55%; height: 100%; display: flex; align-items: center; justify-content: center;
+                        img{
+                            width: 62%;
+                        }
+
+                    }
+                }
+
+                .for-user{
+                    display: flex; align-items: center; justify-content: center;width: 50%; margin-right: 10px;transition: .6s;
+                    a{
+                        height: 100px; width: 100px; width: 20%; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-left: 1rem;
+                        img{
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        }
+        @media screen and (max-width: 970px) {
+            .header-container{
+                .access-user-header{
+                    .form-inline{
+                        width: 57%;
+
+                        input{
+                            height: 70%;
+                        }
+                    }
+                .access-user{
+                    display: none;
+                }
+                .hamburguer{
+                    display: flex; margin-inline-start: 11%;
+                }
+                }
+            }
+            .navbar{
+                display: none;
+            }
+        }
+
+    @media screen and (max-width: 853px) {
+        .button-navbar{
+                        font-size: .1rem;
+            }
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            .footer-info,
+            .footer-hours,
+            .footer-services,
+            .footer-social {
+                width: 100%;
+            }
+        }
+
+    }
+    .navbar{
+        width: 100%; display: flex; justify-content: center; padding: 0; border-top: 1px var(--cor3) solid;
+        box-shadow: 0px 2.6px 4px 1px rgba(29, 29, 29, 0.329);
+        button{
+            border: 1px;
+        }
+        .navbar-container{
+            width: 100%;max-width: 1480px; height: 3rem;padding-inline: 5px; align-items: center; justify-content: center;
+            .list-itens-navbar{
+                display: flex; width: 100%; height: 100%; padding: 0; margin: 0;
+                li{
+                    width: 50%; margin: 1px; list-style: none; display: flex; align-items: center; justify-content: center;
+                    .button-navbar{
+                            font-size: 14px;
+                            width: 100%; padding: 5px; font-weight: 600; text-decoration: none;
+                            height: 100%; display: flex; align-items: center; justify-content: center;
+                            color: var(--cor5); transition: .4s;
+                        }
+                        .button-navbar:hover{
+                            background: rgba(22, 22, 22, 0.842);
+                        }
+                }
+            }
+        }
+
+        @media screen and (max-width: 970px) {
+
+            .navbar-container{
+                box-shadow: none;
+                background-color: var(--cor3);
+
+                .list-itens-navbar{
+                    li{
+                        .button-navbar{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+    main{
+        width: 100%; background: var(--cor5);transition: .6s;
+
+
+        
+        .organ-div{
+            height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center;
+
+            .main-container{
+                width: 100%; height: 100%; max-width: 1280px; padding-block: 1rem; padding-inline: 1rem;
+            }
+        }
+
+
+
+        .zone-uk-panel{
+              display: flex; width: 100%;
+            
+        }
+        .zone-uk-panel-left{
+            width: 50rem; width: 100%;
+
+
+            /* background: blue; */
+        }
+        .zone-uk-panel-left-p{
+             width: 100%;  display: flex; min-height: 1000px;
+
+
+             /* background: rgb(238, 255, 0); */
+
+
+        }
+        .zone-uk-panel-left-p-img{
+            width: 100%; height: 600px; top: 0; position: sticky;
+            display: flex;
+        }
+        .nav-zone-img{
+            width: 18%; overflow-y: auto;
+            div{
+                width: 100%; height: 100px; margin-top: 5px;border-radius: 3px;
+                border: .5px solid rgba(0, 0, 0, 0.144); cursor: pointer;
+            }
+            div:hover{
+                border: rgb(57, 178, 248) 4px solid; border-radius: 4px;
+            }
+        }
+        .zone-produto-img{
+            width: 85%;
+            background-image: url('/image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.171);
+            border-radius: 4px; cursor: pointer;
+        }
+        .zone-produto-img:hover{
+            border: rgb(57, 178, 248) 5px solid; border-radius: 4px;
+        }
+
+
+
+
+
+
+
+
+
+
+        .zone-uk-panel-right{ 
+            width: 76%; padding-left: 1rem;
+            display: flex; flex-direction: column; align-items: center;
+            /* background: rgb(54, 182, 4); */
+
+        }
+
+        .classe-cp{
+            padding-top: 1rem; padding-bottom: .3rem; width: 100%; display: flex; justify-content: flex-start; font-weight: 600;
+            a{color: rgb(57, 178, 248);font-weight: 600;}
+        }
+        .title-produto-zone-uk-panel{ 
+            width: 100%; display: flex; justify-content: center; align-items: center;
+            h1{ 
+                font-size: 29px; font-weight: 600; width: 100%; margin-bottom: 7px;
+                color: rgba(22, 22, 22, 0.884); font-weight: 600;
+            }
+        }
+        .codigobarra-cp{
+            width: 100%; font-size: 15px; padding-bottom: 1rem; font-weight: 500;color: rgba(0, 0, 0, 0.664);
+        }
+        .conteudo-descrição-produto{
+            list-style: none;
+            margin: 0; text-align: justify; font-weight: 500;color: rgba(0, 0, 0, 0.548); font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .creditosdevenda{
+            width: 100%; font-size: .1rem; padding: .5rem .5rem .5rem 0rem; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+        
+            .title-span-creditosdevenda{
+                margin: 0; font-size: 13px; font-weight: 800; color: rgba(0, 0, 0, 0.76);
+            }
+        
+            a{
+                margin: 0; font-size: 19px; font-weight: 800; color: rgb(57, 178, 248);
+            }
+        }
+        .compra-cp{
+            display: flex; width: 100%;
+
+            .valor{
+                height: 200px; width: 70%; display: flex; align-items: center; justify-content: center;
+                font-size: 2.7rem; font-weight: 700; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .compra-carrinho-cp{
+                height: 100%; width: 70%; display: flex;flex-direction: column;
+                button{
+                    height: 3.5rem; width: 100%;
+                    border-radius: 5px; border: none; outline: none;
+                    cursor: pointer;text-transform: capitalize;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+                .compra{
+                    display: flex; align-items: center; justify-content: space-between;
+                    color: white; background: linear-gradient(rgb(57, 178, 248),rgb(24, 142, 211)); font-weight: 500; padding: 1rem; padding-inline: 1.5rem;
+                      img{margin-bottom: .4rem;} 
+                }
+                .compra:hover{
+                    background: linear-gradient(rgb(29, 166, 245),rgb(8, 135, 209));
+                }
+                .carrinho{
+                    display: flex; align-items: center; justify-content: space-between;  margin-top: .5rem; background: linear-gradient( rgb(255, 255, 255), rgba(253, 253, 253, 0.678));
+                    color:rgb(8, 135, 209);  border: 2px solid rgb(8, 135, 209); font-weight: 700; padding: 1rem; padding-inline: 1.5rem;
+                      img{margin-bottom: .4rem;} 
+                }
+                .carrinho:hover{
+                    background: rgb(241, 241, 241);
+                }
+                .quantidade{
+                    display: flex;align-items: center; justify-content: space-around; margin-bottom: 1rem;
+                    span{width: 70px;font-size: 2rem; font-weight: 400; text-align: center;} 
+                    button{
+                        font-size: 30px; height: 100%; width: 100px;
+                        display: flex; align-items: center; justify-content: center;
+                        color: rgb(0, 0, 0); font-weight: 800; 
+                    }
+                }
+            }
+        }
+        .compra-cp-aviso{ 
+            margin-top: 5rem; height: 130px; width: 100%; margin-left: 10px; background: linear-gradient(rgb(29, 166, 245),rgb(8, 135, 209));
+            display: flex; align-items: center; justify-content: space-around; border-radius: 5px;
+
+            .compra-cp-aviso-content{
+                height: 83%; width: 70%; align-items: center; justify-content: center;background: linear-gradient(rgb(29, 166, 245),rgb(8, 135, 209)); margin:1rem;
+                display: flex; flex-direction: column; padding: .5rem; border-radius: 5px; box-shadow: .1px .1px px .1px black; cursor: pointer; border: 1px solid rgba(0, 0, 0, 0.01); border-top: none;
+
+                .compra-cp-aviso-content-img{
+                    width: 46%; background: white; border-radius: 100%; box-shadow: .1px .1px 10px .1px black;
+                    display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+                    img{width: 100%;}
+                }
+                .compra-cp-aviso-content-txt{
+                    height: 45%; width: 75%; color: rgb(255, 255, 255); text-align: center;
+                    display: flex; justify-content: center; font-weight: 500; margin-bottom: 3rem;
+                }
+
+                
+            }
+        }
+
+
+        @media screen and (max-width: 940px) {
+        .zone-uk-panel{
+            flex-direction: column;       
+        }
+        .zone-uk-panel-left-p{  
+            min-height: auto;   justify-content: center;
+        }
+        .zone-uk-panel-left-p-img{ 
+            background: rgb(255, 255, 255); height: 450px; width: 95%; position: relative;
+        }
+        .zone-produto-img{
+            height: 100%; background-size: 60%;
+        }
+
+
+        .zone-uk-panel-right{
+            width: 100%;
+        }
+        .classe-cp{
+            padding-inline: 1rem; margin-bottom: 0rem; padding-bottom: 0rem; font-weight: 500;
+        }
+        .title-produto-zone-uk-panel{
+            justify-content: center; padding-left: 1rem; h1{font-weight: 500;}
+        }
+        .codigobarra-cp{
+            padding-inline: 1rem; margin-bottom: 0; padding-bottom: .3rem;
+        }
+        .conteudo-descrição-produto{
+            padding-inline: 1rem; font-size: .82rem;
+        }
+        .creditosdevenda{
+            padding-inline: 1rem; font-size: .1rem;
+            title-span-creditosdevenda{
+                margin: 0; font-size: 13px; font-weight: 800; color: rgba(0, 0, 0, 0.76);
+            }
+        
+            a{
+                margin: 0; font-size: 19px; font-weight: 800;
+            }
+        }
+        
+        .compra-cp{
+            display: flex; width: 100%; height: auto;
+
+            .valor{
+                width: 80%;display: flex; align-items: center; justify-content: center;
+                font-size: 3.7rem; font-weight: 700; height: 160px;
+            }
+            .compra-carrinho-cp{
+                height: 100%; width: 70%; display: flex;flex-direction: column;
+                button{
+                    height: 3.5rem; margin-top: 10px; width: 100%;
+                    border-radius: 5px; border: none; outline: none;
+                    cursor: pointer;text-transform: capitalize;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+                .compra{
+                    display: flex; align-items: center;
+                    color: white;font-weight: 500; 
+                }
+                .carrinho{
+                    display: flex; align-items: center;
+                    color: var(--cor1);  border: 2px solid var(--cor1); font-weight: 700; 
+                }
+                .quantidade{
+                    display: flex;align-items: center; justify-content: space-around;
+                    span{width: 70px;font-size: 2rem; font-weight: 400; text-align: center;}
+                    button{
+                        font-size: 30px; height: 100%; width: 100px;
+                        display: flex; align-items: center; justify-content: center;
+                        color: rgb(0, 0, 0); font-weight: 800; 
+                    }
+                }
+            }
+        }
+        
+        .compra-cp-aviso{
+            display: none;;
+        }
+
+
+
+
+/*         
+        .zone-uk-panel-left-p-img{ 
+            background: rgb(255, 255, 255); height: 450px; flex-direction: column-reverse; position: relative;
+        }
+        .nav-zone-img{
+            background: rgb(192, 32, 59); height: 20%; width: 100%; overflow: hidden;
+            display: flex; justify-content: center; 
+             div{height: 100%; width: 100px; margin-top: 0px; margin-left: 5px;  overflow-x: auto; white-space: nowrap; }
+        }
+        .zone-produto-img{
+            height: 80%; width: 100%; background-size: 40%;
+        }*/
+        
+        } 
+
+
+
+
+
+
+
+        .rnk-comp-especificacoes{
+            max-width: 41rem;
+        }
+        .rnk-link{
+            color: rgb(29, 166, 245);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .baner{
+            margin: 0;transition: .6s;
+        }
+        section{
+            margin-bottom: 2rem;transition: .6s;
+        }
+        .banner-principal{
+                margin-inline: 0rem;border-radius: 1px; margin-top: 9.4rem; margin-bottom: .7rem;
+            }
+            @media screen and (max-width: 940px) {
+                .banner-principal{
+                    margin-top: 0;
+                }
+            }
+        h3{
+            text-align: start; padding-left: 2rem; height: 3rem;
+            display: flex; align-items: center; font-size: 170%;
+            color: var(--cor1); font-weight: 600;transition: .6s;
+        }
+        hr{
+            background: var(--cor1);transition: .6s;
+        }
+        @media screen and (max-width: 925px) {
+                .uk-panel{
+                    width: 11rem; height: 15rem;
+                    .carrinho{
+
+                        z-index: 1; z-index: 10; position: absolute; top: 0; right: 0; bottom: 1; left: 1; width: 50px; height: 30px; display: none; display: none; align-items: center; justify-content: center; margin-top: 10px;
+
+                        a{
+
+                            background: var(--cor1); width: 50%; height: 3rem; border-radius: 100%;box-shadow: 0px 0px 10px 1px rgb(245, 243, 243);
+
+                            img{
+
+                                width: 30%;
+
+                            }
+                }
+            }
+
+                    div{
+                        height: 100%;
+
+                        .card-body{
+                            height: 30%;
+                            .card-text{
+                            height: 79%; font-size: 10px; overflow: hidden;
+                            span{
+                                font-size: 1.3rem; overflow: hidden; font-weight: 700;
+                            }
+
+
+                        }
+                            a{
+                                width: 80%; background: var(--cor2); height: 2rem;; display: flex; justify-content: center; font-weight: 500;
+                                margin-bottom: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+    }
+
+    footer {
+        background: black;
+        width: 100%; color: var(--cor5); height: 100rem;  font-size: 11px;
+        display: flex; flex-direction: column;  align-items: center;
+
+
+
+        .container {
+            width: 100%; height: 100%;
+            max-width: 1350px;
+            margin:  auto;
+            border-radius: 10px;
+            box-sizing: border-box;
+
+        }
+        .participe-da-equipe{ background: linear-gradient( rgb(0, 0, 0), rgb(20, 20, 20));
+            width: 100%; display: flex; justify-content: center; align-items: center; height: 10rem; box-shadow: 1px 1px 10px 1px rgba(29, 29, 29, 0.329);
+
+            .noticia-juca{
+                width: 10rem; display: flex; justify-content: center; align-items: center;
+                margin-inline:1rem;font-weight: 600; font-size: 12px; display: flex;flex-direction:column;font-weight: 800;color:rgb(255, 255, 255);
+                span{
+                    font-weight: 400; display: flex; align-items: center; justify-content: center;
+                }
+
+
+            }
+            input{
+                border: none; border-radius: 7px; font-size: 100%;
+            }
+            #text-form-footer{
+                width: 25rem; height: 3rem; padding-left: 10px; margin: 5px;
+            }
+            #email-form-footer{
+                width: 25rem; height: 3rem;padding-left: 10px; margin: 5px;
+            }
+            .button-form-footer{
+                width: 8rem; height: 3rem; border-radius: 5px; margin: 5px;  font-weight: 800; border: none; border-style: none; background: linear-gradient( rgb(1, 200, 226), rgb(4, 118, 153));
+                color: white;
+            }
+            .button-form-footer:hover{
+            background: rgb(2, 129, 151)
+            }
+        }
+
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap; height: 100%; overflow: hidden;
+            justify-content: space-between;
+
+
+            .footer-info,
+            .footer-hours,
+            .footer-services,
+            .footer-social {
+                flex: 1; background: black;
+                margin-bottom: 20px; padding: 1rem; border-radius: 1rem;
+                margin-bottom: 10px; box-shadow: 0px 0px 9px 2px rgba(177, 2, 2, 0.103);
+                font-size: 13px; display: flex; flex-direction: column;
+
+                h3{
+                    font-size: 20px; color: var(--cor5); font-weight: 800;
+                }
+                p{
+                    margin-top: .5rem;
+                }
+            }
+
+        }
+
+
+
+
+        .footer-services ul,
+
+        .footer-social ul {
+            list-style-type: none;
+            padding: 0;
+
+        }
+
+
+        .footer-services li,
+        .footer-social li {
+            margin-bottom: 5px;
+            list-style: none;
+
+        }
+
+
+        .footer-social li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+
+        .footer-social li:last-child {
+            margin-right: 0;
+        }
+
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 1020px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .participe-da-equipe{
+                height: 90rem; padding: 1rem;
+                flex-direction: column;
+
+            .button-form-footer{
+                width: 25rem;
+                margin-bottom: 4.8rem;
+            }
+            .noticia-juca{
+                margin-top: 4rem;
+                width: 20rem;
+                font-size: 15px;
+            }
+            }
+
+            .footer-info,
+            .footer-hours,
+            .footer-services,
+            .footer-social {
+                width: 100%;
+
+            }
+        }
+
+
+    }
+    @media (max-width: 970px){
+        header{
+            position: relative;
+        }
+        
+    }
+}
+
+</style>
+<body>
+    
+    <div id="_next">
+        
+        <header>
+            <div class="header-container">
+                <nav class="access-user-header">
+                    <a class="logo" href="/index.html">
+                        <img src="/img/logo/logo2.png">
+                    </a>
+                    <div class="form-inline">
+                        <form class="uk-search uk-search-default" style="width: 90%;">
+                            <a href="" class="uk-search-icon-flip" uk-search-icon style="color: var(--cor2);"></a>
+                            <input class="form-control mr-sm-2" type="search" placeholder="O que você procura?" aria-label="Pesquisar">
+                        </form>
+                    </div>
+                    <div class="access-user">
+                        <div class="login-register-access">
+                            <div class="img-rgac"><img src="/img/users.png" alt=""></button></div>
+                            <span class="grande">Faça <a href="/paginas/login/Logue-entre-em-juca.html">LOGIN</a> ou crie seu <a href="/paginas/CADASTRE-SE/Logue-entre-em-juca.html">CADASTRO</a></span>
+                        </div>
+                        <div class="for-user">
+                            <a href="#"><img src="/img/apoio-suporte.png" alt="suporte"></a>
+                            <a href="/paginas/LOGIN/Logue-entre-em-juca.html"><img src="/img/do-utilizador (1).png" alt="perfil"></a>
+                            <a href="#"><img src="/img/carrinho-de-compras.png" alt="carrinho"></a>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="hamburguer">
+                        <a id="hamburguer-abrir" onclick=" menu_mobile()">
+                            <img src="/img/hamburguer.png" width="30px" alt="Juca Pharma">
+                        </a>
+                        <div class="menu-hamburguer" style="display: none;">
+                            <div class="close"onclick=" menu_mobile()" id="close-navbar-mobile-hamburguer"><button style="outline: none;">x</button></div>
+                            <nav class="navbar-mobile-hamburguer">
+                                <div class="title">
+                                    <img src="/img/do-utilizador.png" alt="icon user">
+
+                                    <h5>Olá.faça seu login</h5>
+                                </div>
+                                <nav class="navbar">
+                                    <ul class="list">
+                                        <li class="item">minha conta</li>
+                                        <li class="item">meus dados</li>
+                                        <li class="item">meus pedidos</li>
+                                        <li class="item">mamães e bebês</li>
+                                        <li class="item">dermocosméticos</li>
+                                        <li class="item">medicamento e sáude</li>
+                                        <li class="item">higiene e beleza</li>
+                                    </ul>
+                                </nav>
+                                <div class="button">
+                                    <button class="login">
+                                        <a href="/paginas/Logue-entre-em-juca.html">logar</a>
+                                    </button>
+
+                                    <button class="register">
+                                        <a href="/paginas/Cadastre-entre-em-juca.html">register</a>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <ul class="list-itens-navbar">
+                        <li><a class="button-navbar" href="#">Mamães e bebês</a></li>
+                        <li><a class="button-navbar" href="#">Dermocosméticos</a></li>
+                        <li><a class="button-navbar" href="#">Medicamentos e Saúde</a></li>
+                        <li><a class="button-navbar" href="#">Higiene e Beleza</a></li>
+                        <li><a class="button-navbar" href="#">Fitness e Nutrição</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        
+
+        <main id="main-content">
+            <div class="organ-div">
+                <div class="main-container">
+
+                    <section class="zone-uk-panel">
+                        <div class="zone-uk-panel-left">
+                            <div class="zone-uk-panel-left-p">
+                                <div class="zone-uk-panel-left-p-img">
+                                    <div class="nav-zone-img">
+                                        <div>a</div>
+                                        <div>a</div>
+                                        <div>a</div>
+                                        <div>a</div>
+                                        <div>a</div>
+                                        <div>a</div>
+                                        <div>a</div>
+                                        <div>a</div>
+                                        
+                                    </div>
+
+
+                                    <div class="zone-produto-img"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="zone-uk-panel-right">
+                            <nav class="classe-cp"><a href="#">Desodorante</a></nav>
+                            <div class="title-produto-zone-uk-panel">
+                                <h1>Desodorante Antitranspirante Aerosol Masculino Rexona Extracool 72 horas 150ml</h1>
+                            </div>
+                            <span class="codigobarra-cp">UPC: 123124234</span>
+                            <p class="conteudo-descrição-produto"> O Desodorante Antitranspirante Aerosol Masculino Rexona Xtracool oferece proteção seca e fresca por até 72 horas. Sua fórmula, ativada pelo movimento, combate maus odores e suor excessivo, proporcionando mais segurança, frescor e bem-estar. A embalagem contém 150ml.</p>
+                            <span class="creditosdevenda">
+                                <p class="title-span-creditosdevenda">VENDIDO E ENTREGUE POR</p>
+                                <a href="#">Juca Pharma</a>
+                            </span>
+                            <div class="compra-cp">
+                                <div class="valor"><span>R$ 17,49</span></div>
+                                <div class="compra-carrinho-cp">
+                                    <div class="quantidade">
+                                        <button>-</button>
+                                        <span>1</span>
+                                        <button>+</button>
+                                    </div>
+                                    <button class="compra"><span>comprar</span> <img src="/basket.png" width="30px" style="margin-top: .3rem;" alt=""></button>
+                                    <button class="carrinho"><span>carrinho</span> <img src="/basket (1).png" width="31px" style="margin-top: .3rem;" alt=""></button>
+                                </div>
+                            </div>
+
+
+<!-- 
+                            <div class="compra-cp-aviso">
+                                <div class="compra-cp-aviso-content">
+                                    <div class="compra-cp-aviso-content-img"><img src="/img/secure-payment.png" alt=""></div>
+                                    <div class="compra-cp-aviso-content-txt">Pagamentos e Segurança</div>
+                                </div>
+                                <div class="compra-cp-aviso-content">
+                                    <div class="compra-cp-aviso-content-img"><img src="/img/delivery-truck (1).png" alt=""></div>
+                                    <div class="compra-cp-aviso-content-txt">Enviado por Juca</div>
+                                </div>
+                                <div class="compra-cp-aviso-content">
+                                    <div class="compra-cp-aviso-content-img"><img src="/img/return.png" alt=""></div>
+                                    <div class="compra-cp-aviso-content-txt">Política de Devolução</div>
+                                </div>
+                            </div> -->
+
+
+
+                        </div>
+                    </section>
+
+
+
+
+
+
+                    <div class="rnk-comp-especificacoes">
+                        <div hidden="hidden">
+                            <div id="caracteristicas">
+                                <h4 class="group-Especificacoes">Especificações</h4>
+                                <table cellspacing="0" class="group Especificacoes">
+                                    <tbody>
+                                        <tr class="even">
+                                            <th class="name-field Apresentacao">Apresentação</th>
+                                            <td class="value-field Apresentacao">Em Aerosol</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="name-field Genero">Gênero</th>
+                                            <td class="value-field Genero">Masculino</td>
+                                        </tr>
+                                        <tr class="even">
+                                            <th class="name-field Substancias">Substâncias</th>
+                                            <td class="value-field Substancias">Sem Álcool</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="name-field Tipo">Tipo</th>
+                                            <td class="value-field Tipo">Antitranspirante, Para Proteção</td>
+                                        </tr><tr class="even">
+                                            <th class="name-field Fragrancia">Fragrância</th>
+                                            <td class="value-field Fragrancia">Refrescante</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="name-field Quantidade">Quantidade</th>
+                                            <td class="value-field Quantidade">150ml</td>
+                                        </tr><tr class="even">
+                                            <th class="name-field Parte-do-Corpo">Parte do Corpo</th>
+                                            <td class="value-field Parte-do-Corpo">Para Axilas</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="name-field Tipos-de-Pele">Tipos de Pele</th>
+                                            <td class="value-field Tipos-de-Pele">Para Todos os Tipos de Pele</td>
+                                        </tr>
+                                        <tr class="even">
+                                            <th class="name-field Fases-da-Vida">Fases da Vida</th>
+                                            <td class="value-field Fases-da-Vida">Para Adulto</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <h2 class="h4">Especificações</h2>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>Apresentação</th>
+                                    <td>
+                                        <a href="https://www.drogariasaopaulo.com.br/desodorante/Em%20Aerosol?PS=48&amp;map=c,specificationFilter_465" class="rnk-link" target="_blank">Em Aerosol</a>
+                                    </td></tr>       <tr>           <th>Gênero</th>           <td><a href="https://www.drogariasaopaulo.com.br/desodorante/Masculino?PS=48&amp;map=c,specificationFilter_466" class="rnk-link" target="_blank">Masculino</a>           </td>       </tr>       <tr>           <th>Substâncias</th>           <td><a href="https://www.drogariasaopaulo.com.br/desodorante/Sem%20%C3%81lcool?PS=48&amp;map=c,specificationFilter_467" class="rnk-link" target="_blank">Sem Álcool</a>           </td>       </tr>       <tr>           <th>Tipo</th>           <td><a href="https://www.drogariasaopaulo.com.br/desodorante/Antitranspirante?PS=48&amp;map=c,specificationFilter_468" class="rnk-link" target="_blank">Antitranspirante</a>, <a href="https://www.drogariasaopaulo.com.br/desodorante/Para%20Prote%C3%A7%C3%A3o?PS=48&amp;map=c,specificationFilter_468" class="rnk-link" target="_blank">Para Proteção</a>           </td>       </tr>       <tr>           <th>Fragrância</th>           <td><a href="https://www.drogariasaopaulo.com.br/desodorante/Refrescante?PS=48&amp;map=c,specificationFilter_469" class="rnk-link" target="_blank">Refrescante</a>           </td>       </tr>       <tr>           <th>Quantidade</th>           <td><a href="https://www.drogariasaopaulo.com.br/desodorante/150ml?PS=48&amp;map=c,specificationFilter_470" class="rnk-link" target="_blank">150ml</a>           </td>       </tr>       <tr>           <th>Parte do Corpo</th>           <td><a href="https://www.drogariasaopaulo.com.br/desodorante/Para%20Axilas?PS=48&amp;map=c,specificationFilter_471" class="rnk-link" target="_blank">Para Axilas</a>           </td>       </tr>       <tr>           <th>Tipos de Pele</th>           <td><a href="https://www.drogariasaopaulo.com.br/desodorante/Para%20Todos%20os%20Tipos%20de%20Pele?PS=48&amp;map=c,specificationFilter_472" class="rnk-link" target="_blank">Para Todos os Tipos de Pele</a>           </td>       </tr>       <tr>           <th>Fases da Vida</th>           <td><a href="https://www.drogariasaopaulo.com.br/desodorante/Para%20Adulto?PS=48&amp;map=c,specificationFilter_559" class="rnk-link" target="_blank">Para Adulto</a>           </td>       </tr>    </tbody></table></div>
+                    
+
+
+
+
+                    <section style="width: 100%;padding-top: 4rem; padding-left: 1rem; text-align: justify; max-width: 41rem;">
+                        <h3 style="margin: 0; padding: 0; padding-bottom:1rem;" >Descrição Desodorante Antitranspirante Aerosol Masculino Rexona Extracool 72 horas 150ml</h3>
+                        <p class="conteudo-descrição-produto" style="margin-top: 1rem;">• A exclusiva fórmula do Desodorante Aerosol Masculino Rexona Xtracool garante 72 horas de proteção contra o suor e o mau odor ativado pelo movimento • O desodorante Xtracool o mantém seco, refrescado e protegido para que nada o detenha • Antitranspirante masculino fácil de usar: agite e aplique nas axilas a não menos de 15 cm da pele • Esse desodorante antitranspirante contém uma fragrância refrescante e sensação de frescor durante o dia todo • Esse desodorante antibacteriano não contém álcool* e não afeta a camada de ozônio, sua lata é de alumínio 100% reciclável, feito com energia elétrica 100% renovável • O Desodorante Aerosol Masculino Rexona Xtracool permite que você fique sempre protegido, não importa o que aconteça. Rexona não te abandona Mais uma vez Rexona se supera e relança sua linha de desodorantes com uma fórmula inovadora. O Desodorante Aerosol Masculino Rexona Xtracool combina um novo e exclusivo ativo antitranspirante com a tecnologia de fragrâncias encapsuladas. Esse desodorante antitranspirante o mantém protegido por até 72 horas, ativado pelo seu movimento e o deixa muito mais confiante para encarar qualquer desafio. Com o registro de 16 patentes e mais de 300 testes técnicos, está comprovado que essa nova tecnologia antitranspirante entrega um nível de proteção contra o suor como nenhuma outra proposta regular já entregou antes. A nova e exclusiva fórmula de Rexona Xtracool trabalha com um sistema de partículas menores e mais estáveis que formam uma barreira protetora mais resistente e duradoura contra a transpiração e o mau odor, mantendo você seco, refrescado e protegido a cada novo movimento e por muito mais tempo. Esse desodorante contém uma fragrância refrescante e sensação de frescor durante o dia todo. A lata usada no desodorante é feita de alumínio 100% reciclável, e o produto é feito com energia elétrica 100% renovável, não contém álcool* e não afeta a camada de ozônio. Experimente também outros produtos da linha de desodorantes aerosol masculinos Rexona e se sinta sempre protegido durante qualquer atividade, porque Rexona não te abandona! *Não contém álcool etílico</p>
+                    </section>
+
+
+                    <section class="mais-recomendado">
+                        <h3>Produtos recentes</h3>
+                        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+                            <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid" style=" display: flex; justify-content: center; color: black; margin: 10px;">
+                            
+                                   
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produto-card">
+                                <div class="carrinho-outros">
+                                    <button><img src="/img/carrinho-de-compras.png" alt=""></button>
+                                </div>
+                                <div class="produto-container-card">
+                                    <div class="img-card-produto">
+                                        <img src="/img/img-produto/tadala.png" alt="">
+                                    </div>
+                                    <div class="container-card-produto">
+                                        <span>Absorvente Intimus® Noturno Suave com </span>
+                                    </div>
+                                    <div class="valor-produto-card">$19,99</div>
+                                    <div class="button-produto-card" >
+                                        <button>comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous" style="color: var(--cor1)"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next" style="color: var(--cor1)"></a>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer">
+    
+            <form class="participe-da-equipe">
+                <label class="noticia-juca" for="ptc-d-epque">
+                    Juca Pharma! Nóticias
+                    <span>Receba Ofertas</span>
+                </label>
+                <input type="text" id="text-form-footer" placeholder="Informe seu nome">
+                <input type="email" id="email-form-footer" placeholder="Informe seu E-mail">
+                <button class="button-form-footer"style= "margin-inline:1rem;" type="submit">Cadastrar</button>
+            </form>
+    
+    
+            <div class="container">
+                <div class="footer-content" style="padding-top: 2rem;">
+    
+                    <div class="footer-info">
+    
+                        <h3 style="font-size: 1.5rem;">JUCA PHARMA</h3>
+    
+                        
+                            <strong>Endereço:</strong>
+                            Endereço Completo da Farmácia <br> <br>
+    
+                        
+                            <strong>Televendas:</strong> 
+                            4002-8282 
+                            <br> <br>
+                        </li>
+                            <strong>Atendimento ao cliente</strong>
+                            0800 275 1313 
+                            <br> <br>
+                            <strong>Horário do SAC </strong>
+                            das 07:00 às 23:00
+                            sac@pmenos.com.br <br> <br>
+                            <strong>E-mail:</strong> JucaPharma@gmail.com
+                        </li>
+    
+                    </div>
+    
+                    <div class="footer-hours">
+                        <h3>Atendimento</h3>
+                            
+                                <strong>Endereço:</strong>
+        
+                                R. Ana Paula, 1321 -
+        
+                                2° andar - Centro
+        
+                                Salvador/BA - CEP: 40484-375
+                            <br> <br>
+        
+                            
+                                <strong>Central SAC:</strong>
+                                (71) 98506-1572
+                            <br> <br>
+                                <strong>E-mail:</strong>
+                                faleconosco@supflash.com.br</li> <br> <br>
+        
+                            <strong>chat:</strong>
+                                <a href="#"> <button style="cursor: pointer; background: transparent; color: white; padding-inline: 1rem; padding-block: 1px; border: solid 2px white;">iniciar atendimento</button>                                </a>
+                            
+    
+                    </div>
+    
+                    <div class="footer-services">
+    
+                        <h3>Serviços</h3>
+                            <li><a href="#" style="color: white" href="/servicos/consultoria-farmacêutica">Consultoria Farmacêutica</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/consulta-online">Consultas Online</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/entrega-domicilio">Entrega em Domicílio</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/renovacao-receitas">Renovação de Receitas</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/testes-laboratoriais">Testes Laboratoriais</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/medicamentos-manejo-dor">Medicamentos para Manejo da Dor</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/vacinas-imunizacoes">Vacinas e Imunizações</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/consultoria-farmacêutica">Consultoria Farmacêutica</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/programas-desconto">Programas de Desconto</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/atendimento-24-horas">Atendimento 24 Horas</a></li>
+                            <li><a href="#" style="color: white" href="/servicos/ajuda-com-cobertura">Ajuda com Cobertura de Planos de Saúde</a></li>
+                        
+                    </div>
+    
+                    
+                    <div class="footer-social" style="ul{display: flex; align-items: center; justify-content: ce;}">
+    
+                        
+                            
+                        <h3>Empresas parceiras</h3>
+    
+                        <ul style="display: flex; align-items: center; margin: 0;">
+    
+                            <li style="display: flex; justify-content: center; align-items: center;">
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjFxt6EtpOGAxX6q5UCHYxhD5wQFnoECBUQAQ&url=https%3A%2F%2Fwww.grautecnico.com.br%2F&usg=AOvVaw2x1KklN4Mb1q8Vr4n2gcGf&opi=89978449" style="width: 100%; height: 100%;">
+                                    <img src="/img/logo/grau.png"  style="background: none;" width="155px" alt="">
+                                </a>
+                            </li>
+                            </ul>   
+
+                            
+                    
+                    <h3>Siga-nos nas redes Sociais</h3>
+
+                    <ul style="display: flex; align-items: center;">
+    
+                        <li style="margin-right: 1rem;">
+                            <a href="#">
+                                <img src="/img/logo/facebook.png" width="35px" alt="">
+                            </a>
+                        </li>
+                        <li style="margin-right: 1rem;"i>
+                            <a href="#">
+                                <img src="/img/logo/instagram.png" width="35px" alt="">
+                            </a>
+                        </li>
+                        <li style="margin-right: 1rem;">
+                            <a href="#">
+                                <img src="/img/logo/github.png" width="35px" alt="">
+                            </a>
+                        </li>
+    
+                        </ul>   
+                
+
+
+
+                    
+
+                    
+                </div>
+
+
+
+                </div>        
+            </div>
+
+    
+    
+            <div class="footer-bottom" style=" background: var(--cor1); width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                
+
+            <div style="background: var(--cor1);display: flex; align-items: center; justify-content: center; flex-direction: column; border-radius: 0rem 0rem 4rem 4rem; width: 100%; padding: 3rem; max-width: 1630px;">
+                <span style="font-size: 11px; padding-bottom: 1rem;">aceitos:</span><div><img src="/img/logo/image.png" alt=""></div>
+            </div>
+            <div style=" padding: 10px; max-width: 1630px;">
+                
+
+                <p>Empreendimentos Pague Menos S/A; CNPJ: 06.626.253/0001-51 | Rua Senador Pompeu, 1520, Centro, Fortaleza-CE; CEP: 60.025-001 | Telefones: 0800 275 1313 e 4002-8282 | Horário de funcionamento da filial: 24h |
+                    Farmacêutico Responsável: Flávio Luiz de Souza Oliveira - CRF Nº 3058 CE.| Farmacêutico (a) substituto responsáveis pelo SAC : Natália Matias Frota - CRF Nº 7074 |
+                    Registro Sanitário nº LS00032234/2022 | AFE: 0280418 <br>
+                    As promoções expostas nesse site são válidas por tempo determinado ou enquanto durar o estoque. </p>
+    
+                <!-- <p style="font-weight: 600;">Política de Privacidade | Termos de Uso</p> -->
+    
+                <p style="font-weight: 700;">© 2024 Nome da Farmácia. Todos os direitos reservados.</p>
+    
+            </div>
+            </div>
+    
+        </footer>
+    </div>
+
+    <script src="/js/menu-header.js"></script>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+</body>
+
+</html>

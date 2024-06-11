@@ -1,0 +1,161 @@
+.background-cadastro-produtopp{
+    background: rgb(0, 0, 0, 0.5); width: 100%; height: 100%; position: fixed; top: 0; left: 0;
+    display: none; align-items: center; justify-content: center; z-index: 10000; padding: 2rem;
+    
+
+form{
+     display: flex; width: 1500; height: 80%; background: rgb(247, 247, 247); 
+    flex-direction: column; max-width: 1300px; max-height: 700px;
+}
+.close-background-cadastro-produto{
+    height: 7%; display: flex; justify-content: space-between; align-items: center;
+    font-size: 120%; padding-inline: .4rem; border: solid 1px #00000046; color: rgba(0, 0, 0, 0.26);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     /*  position: absolute; width: 100%; max-width:80%; */
+}
+
+.bttn-close-cp{
+   height: 100%; width: 2%; background: transparent; border: none;
+   font-size: 100%; color: rgba(0, 0, 0, 0.493); cursor: pointer; outline: none; font-weight: 600;
+   
+}
+.bttn-close-cp:hover{
+    color: black;
+}
+/* conteudo form */
+.form-container{
+    height: 93%; display: flex;
+}
+
+/* direita */
+.crc-produto{
+    height: 100%; width: 100%;
+    display: flex; align-items: center; overflow-y: auto; border-left:solid 1px #00000046;
+}
+.left-crc-produto{
+    height: 100%;width: 100%; display: flex; flex-wrap: wrap; justify-content: center;
+}
+.item-left-crc-produto{
+    width: 90%; height: 60px;
+    display: flex; flex-direction: column;
+}
+.item-left-crc-produto-input{
+    height: 100%; border: solid 1px #0335645d; border-radius: 5px; padding-left: 5px;
+    font-size: 75%; outline: #2683ee;
+}
+.item-left-crc-produto-label{
+    height: 30%; color: #05a9db; font-weight: 600;
+}
+.right-crc-produto{
+    height: 100%;width: 100%; display: flex; flex-wrap: wrap; justify-content: center;
+}
+.image-produto-cp{
+    width: 90%; height: 400px; margin-block: 1rem; border: solid 1px #0335645d;border-radius: 5px; padding-top: 15px;
+    overflow: auto; display: flex; overflow: auto; flex-wrap: wrap; justify-content: center;
+    
+    .imagePreview {
+        height: 120px;
+        width: 120px;
+        border: solid 1px #0335645d;
+        display: flex;
+        justify-content: center;
+        align-items: center; outline: none;
+        overflow: hidden;
+        img { display: flex; align-items: center; justify-content: center;
+            max-width: 60%;
+            margin: 0; padding: 0;
+        }
+    }
+}
+.salvar-bttn{
+    border: 5px; background: rgb(0, 153, 255); margin-bottom: 1rem; border-radius: 5px;
+    color: white; cursor: pointer;
+}
+.salvar-bttn:hover{
+    background-color: rgb(4, 131, 216);
+}
+/* direita */
+
+
+
+
+@media screen and (max-width: 950px) {
+
+
+    .background-cadastro-produto{
+        display: block; 
+    }
+    form{
+        width: 100%; height: 100%;
+    }
+    .img-produto{
+        height: 100%;
+    }/* 
+    .{a}
+    .{a}
+    .{a} */
+}
+
+
+/* esquerda */
+
+.img-produto{ align-items: center; justify-content: center;
+    height: 100%; width: 110%; display: flex;
+}
+.produto-container-img{ 
+    display: flex; justify-content: center; padding-right: 1rem;
+}
+
+
+
+
+
+
+
+
+
+        /* esquerda */
+
+
+
+        @media screen and (max-width: 925px) {
+                .produto-cp-cp{
+                    width: 11rem; height: 15rem;
+                    .carrinho{
+
+                        z-index: 1; z-index: 10; position: absolute; top: 0; right: 0; bottom: 1; left: 1; width: 50px; height: 30px; display: none; display: none; align-items: center; justify-content: center; margin-top: 10px;
+
+                        a{
+
+                            background: var(--cor1); width: 50%; height: 3rem; border-radius: 100%;box-shadow: 0px 0px 10px 1px rgb(245, 243, 243);
+
+                            img{
+
+                                width: 30%;
+
+                            }
+                }
+            }
+
+                    div{
+                        height: 100%;
+
+                        .card-body{
+                            height: 30%;
+                            .card-text{
+                            height: 79%; font-size: 10px; overflow: hidden;
+                            span{
+                                font-size: 1.3rem; overflow: hidden; font-weight: 700;
+                            }
+
+
+                        }
+                            a{
+                                width: 80%; background: var(--cor2); height: 2rem;; display: flex; justify-content: center; font-weight: 500;
+                                margin-bottom: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }

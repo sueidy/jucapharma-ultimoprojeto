@@ -1,0 +1,128 @@
+
+#_next{
+    height: 120rem; display: flex; flex-direction: column; align-items: center; transition: .6s;
+
+    header{
+
+        .header-container{
+
+            .access-user-header{
+                .hamburguer{
+                    display: none;
+                }
+
+
+                .access-user{
+                    display: flex; width: 20%; align-items: center;transition: .6s;
+                    /* .login-register-access{
+                        display: flex; justify-content: center; align-items: center; width: 41%; color: var(--cor5);
+                        font-size: 77%; font-weight: 700%; font-weight: 800;transition: .6s;
+                        a{
+                            color: var(--cor5); text-decoration: underline; font-weight: 700;
+                        }
+
+                        .img-rgac{
+                            width: 55%; height: 100%; display: flex; align-items: center; justify-content: center;
+                            img{
+                                width: 62%;
+                            }
+
+                        }
+                    } */
+
+                    .for-user{
+                        display: flex; align-items: center; justify-content: center;width: 100%; margin-right: 10px;transition: .6s; padding-right: .5rem;
+                        a{
+                            height: 100px; width: 100px; width: 20%; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-left: 1rem;
+                            
+                        }
+                    }
+                }
+
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+
+            }
+            @media screen and (max-width: 970px) {
+                .header-container{
+                    .access-user-header{
+                        background:var(--cor3);
+                        .form-inline{
+                            width: 57%;
+
+                            input{
+                                height: 70%;
+                            }
+                        }
+                    .access-user{
+                        display: none;
+                    }
+                    .hamburguer{
+                        display: flex; margin-inline-start: 11%;
+                    }
+                    }
+                }
+                .navbar{
+                    display: none;
+                }
+            }
+
+        @media screen and (max-width: 853px) {
+            .button-navbar{
+                            font-size: .1rem;
+                }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                .footer-info,
+                .footer-hours,
+                .footer-services,
+                .footer-social {
+                    width: 100%;
+                }
+            }
+
+        }
+        .navbar{
+            width: 100%; display: flex; justify-content: center; padding: 0; border-top: 1px var(--cor3) solid;
+            
+            button{
+                border: 1px;
+            }
+            .navbar-container{
+                width: 100%;max-width: 1480px; height: 3rem;padding-inline: 5px; align-items: center; justify-content: center;
+                .list-itens-navbar{
+                    display: flex; width: 100%; height: 100%; padding: 0; margin: 0;
+                    li{
+                        width: 50%; margin: 1px; list-style: none; display: flex; align-items: center; justify-content: center;
+                        .button-navbar{
+                                font-size: 14px;
+                                width: 100%; padding: 5px; font-weight: 600; text-decoration: none;
+                                height: 100%; display: flex; align-items: center; justify-content: center;
+                                color: var(--cor5); transition: .4s;
+                            }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 970px) {
+
+                .navbar-container{
+                    box-shadow: none;
+                    background-color: var(--cor3);
+
+                    .list-itens-navbar{
+                        li{
+                            .button-navbar{
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

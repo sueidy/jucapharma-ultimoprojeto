@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN || ENTRE EM JUCA</title>
+    <link rel="stylesheet" href="/css/LOGAR-CSS-KJZXHCV/style-acces-register-user.css">
+</head>
+<body>
+    
+    <header>
+        <section class="header-container">
+            <section class="logo"><a href="\index.html"><img src="\img/logo/logo2.png" width="120px" alt=""></a></section>
+        </section>
+    </header>
+
+    <main>
+        <form method="" onsubmit= "return controle_login()">
+            <div class="title-div">
+                <div class="title">
+                    <img src="\img/do-utilizador.png" alt="">
+                    <h2>login do cliente</h2>
+                </div>
+                <p>Veja seus pedidos de forma fácil, compre mais rápido e tenha uma experiência personalizada :)</p>
+            </div>
+            
+            <div class="div-login">
+                <div class="label-div">
+                    <label for="e-mail-login"><strong>*</strong>nome de usuário ou e-mail</label>
+                </div>
+                <div class="input-div">
+                    <input name="e-mail-login" id="e-mail-login">
+                </div>
+                <span class="alert-aviso"></span>
+            </div>
+
+            <div class="div-login">
+                <div class="label-div">
+                    <label for="password-login"><strong>*</strong>senha</label>
+                    <a href="/paginas/esqueci-a-senha.html">redefinir senha</a>
+                </div>
+                <div class="input-div">
+                    <input type="password" name="password-login" id="password-login">
+                </div>
+                <span class="alert-aviso"></span>
+            </div>
+            <div class="btn-login" style="margin-bottom: 1rem; padding-bottom: 0;">
+                <button id="button-login" type="submit" style="height: 3rem; font-weight: 600;">Continuar</button>
+            </div>
+            <span class="cadastre-se-aqui" style="color: white; display: flex;"><hr style="width:9rem; margin-right: 10px;"><p>ou</p> <hr style="width:9rem; margin-left: 10px;"></span>
+            <div class="btn-login" style="margin-top: .3rem;">
+                <button type="button" onclick="google_login()" style="background: transparent; border: 1px solid rgba(0, 0, 0, 0.349); color: rgba(0, 0, 0, 0.644); font-weight: 600; height: 3rem; display: flex; align-items: center; justify-content: space-around;">Continuar com o Google<img src="/img/logo/google-logo.png" width="25px" alt=""></button>
+            </div>
+            <div class="cadastre-se-aqui">
+                <p  style="height: 4rem;">Não tem cadastro? <a href="Cadastre-entre-em-juca.html">Clique aqui.</a></p>
+            </div>
+        </form>
+    </main>
+    
+
+
+    <script src="/js/LOGAR-JS-KOIJJZXHCV/validar-lgn.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDgjVLpBe79MH_VQ2V3pdmVn3Uy7EnJRqo",
+            authDomain: "jucapharma123.firebaseapp.com",
+            projectId: "jucapharma123",
+            storageBucket: "jucapharma123.appspot.com",
+            messagingSenderId: "349852660696",
+            appId: "1:349852660696:web:6fa4ce5dfc165c189bf8ad"
+        };
+        
+        firebase.initializeApp(firebaseConfig); 
+        </script>
+</body>
+<!-- <style>
+    .loading{
+        background: rgba(143, 0, 0); width: 100%;
+        z-index: 1000; height: 5%; position: fixed; top: 0;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.6rem; h5{color: white; } 
+    }
+</style>
+<div class="loading">
+    <h5>entrando... </h5>
+</div> -->
+</html>

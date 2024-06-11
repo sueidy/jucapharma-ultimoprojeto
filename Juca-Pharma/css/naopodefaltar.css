@@ -1,0 +1,10 @@
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box; outline: none;
+}
+:root{
+    --cor1: #000000;
+    --cor2: linear-gradient( #27afc4, #14b1c9);
+    --cor3: linear-gradient(#2e2b2b,#131212,#000000);
+    --cor5: #ffffff;
+}

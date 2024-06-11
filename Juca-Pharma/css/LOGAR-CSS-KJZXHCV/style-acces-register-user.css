@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: "Martel Sans", sans-serif;
+    margin: 0; padding: 0; outline: none;  transition: .1s;
+    box-sizing: border-box; color: rgba(0, 0, 0, 0.575);
+}
+:root{
+    --cor1: #000000;
+    --cor2: linear-gradient( #4dc4d5, #4dc4d5);
+    --cor3: linear-gradient(#2e2b2b,#131212,#000000);
+    --cor5: #ffffff;
+}
+body{background: var(--cor5);}
+
+header{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 0.4rem;background: var(--cor3);
+    box-shadow: 0px 0px 5px 0px rgb(0, 0, 0.5);
+
+    
+
+    .header-container{
+        width: 100%; height: 65px;
+        max-width: 1440px; display: flex; justify-content: center; align-items: center;
+        img{
+            width:140px;
+        }
+    }
+    @media screen and (min-width:1000px) {
+    .header-container{
+            height: 80px;
+            img{
+                    width: 167px;
+            }
+    }
+}
+}
+main{
+    height: 30rem; background: var(--cor5); display: flex; align-items: center; justify-content: center;
+
+    form{
+        display: flex; align-items: center; flex-direction: column; height: 100%;
+        padding-top: 40px;
+
+        strong{
+            color: var(--cor1);
+        }
+        .title-div{
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center; 
+            margin-bottom: 1.6rem;
+            
+            .title{
+                display: flex; width: 100%; display: flex; align-items: center; justify-content: center;
+                img{ background: black; border-radius: 100%;
+                    width: 2.5rem; margin-bottom: 5px; margin-right: 5px;
+                }
+                h2{
+                    font-size: 1.8rem;color: black;
+                }
+            }
+            p{
+                font-size: 13px; text-align: center;
+                width: 300px;
+            }
+        }
+        .div-login{
+            margin-top: 15px; width: 16rem; display: flex; flex-direction: column; justify-content: center; align-items: center;
+
+            .label-div, .alert-aviso{
+                font-size: 11px; width: 15rem;
+                display: flex; justify-content: space-between;
+            }
+            .input-div{
+                width: 16rem;
+                input{
+                    width: 100%; border-radius: 1px; border: 1px solid rgba(0, 0, 0, 0.342); color: var(--cor2);
+                    height: 2.2rem; border-radius: 5px; padding-inline: 5px; font-size: 67%; transition: .1s;
+                }
+                input:hover{
+                    border: 1px solid #049fe7;
+                }
+            }
+        }
+        .btn-login{
+            width: 87%; margin-block: 1.5rem; display: flex; align-items: center; justify-content: center;
+            button{
+                width: 16rem; background: var(--cor1); color: white; box-shadow: 0px 0px 10px rgb(236, 233, 233);
+                border-radius: 5px; padding-block: .3rem; border: none; cursor: pointer; transition: .2s;
+            }
+            button:hover{
+                background: var(--cor3);
+            }
+        }
+        .cadastre-se-aqui{
+                font-size: 14px; width: 16rem; display: flex; align-items: center; justify-content: center;
+                display: flex; font-weight: 500;
+            }
+    }
+    
+    @media screen and (min-width:900px) {
+        form{
+            .title-div{
+                .title{
+                    img{
+                        width: 3.1rem;
+                    }
+                    h2{
+                        font-size: 2.1rem;
+                    }
+                }
+                p{
+                    font-size: 18px; width: 440px;
+                }
+            }
+            .div-login{ 
+            margin-top: 9px; width: 19rem; display: flex; flex-direction: column; justify-content: center; align-items: center;
+
+            .label-div, .alert-aviso{
+                font-size: 15px; width: 100%; padding-inline: .5rem;
+                display: flex; justify-content: space-between;
+            }
+            .input-div{
+                width: 18rem;
+                input{
+                    width: 100%; border-radius: 1px;
+                    height: 2.6rem; border-radius: 5px; padding-inline: 10px; font-size: 76%;
+                }
+            }
+        }
+        .btn-login{
+            width: 87%; margin-block: 1.5rem; display: flex; align-items: center; justify-content: center;
+            button{
+                width: 18rem; height: 2.6rem;
+                border-radius: 5px; padding-block: .3rem; border: none;
+            }
+        }
+        .cadastre-se-aqui{
+                font-size: 15px; width: 16rem; display: flex; align-items: center; justify-content: center;
+                display: flex; font-weight: 500;
+            }
+        }
+}}
+
+@media screen and (min-width: 900px) {
+    .int-lab{
+        font-size: 12.2px;
+    }
+}
+    @media screen and (max-width: 900px) {
+    
+        .int-lab{
+            font-size: 10.5px;
+        }
+        
+    }

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/produto-card.css">
+
+    <style>
+        *{
+            margin: 0; padding: 0; box-sizing: border-box; outline: none;
+        }
+        
+        :root{
+            --cor1: #8f0804;
+            --cor2: #a00c07;
+            --cor3: #ce0707;
+            --cor5: #ffffff;
+        }   
+        .background-cadastro-produto{
+            background: rgb(0, 0, 0, 0.5); width: 100%; height: 100%; position: fixed;
+            display: flex; align-items: center; justify-content: center;
+        }
+        form{
+             display: flex; width: 80%; height: 80%; background: white;
+            flex-direction: column; max-width: 1300px; max-height: 700px;
+        }
+        .close-background-cadastro-produto{
+            height: 7%; display: flex; justify-content: space-between; align-items: center; background: white;
+            font-size: 120%; padding-inline: .5rem;
+             /*  position: absolute; width: 100%; max-width:80%; */
+        }
+       
+       .bttn-close-cp{
+           height: 100%; width: 5%; background: transparent; border: none;
+           font-size: 100%; color: rgb(105, 0, 0); cursor: pointer;
+       }
+       /* conteudo form */
+        .form-container{
+            height: 93%; display: flex;
+        }
+
+        /* direita */
+        .crc-produto{
+            height: 100%; width: 100%;
+            display: flex; align-items: center; overflow-y: auto;
+        }
+        .left-crc-produto{
+            height: 100%;width: 100%; display: flex; flex-wrap: wrap; justify-content: center;
+        }
+        .item-left-crc-produto{
+            width: 90%; height: 60px;
+            display: flex; flex-direction: column;
+        }
+        .item-left-crc-produto-input{
+            height: 100%; border: solid 1px #8f0804; border-radius: 5px; padding-left: 5px;
+            font-size: 75%;
+        }
+        .item-left-crc-produto-label{
+            height: 30%; color: #8f0804; font-weight: 400;
+        }
+        .right-crc-produto{
+            height: 100%;width: 100%; display: flex; flex-wrap: wrap; justify-content: center;
+        }
+        .salvar-bttn{
+            border: 5px; background: orange; margin-bottom: 1rem; border-radius: 5px;
+        }
+        /* direita */
+
+
+
+
+        @media screen and (max-width: 800px) {
+
+
+            .background-cadastro-produto{
+                display: block; background: white;
+            }
+            form{
+                width: 100%; height: 100%;
+            }
+            .img-produto{
+                height: 100%;
+            }/* 
+            .{a}
+            .{a}
+            .{a} */
+        }
+        
+
+        /* esquerda */
+        
+        .img-produto{ align-items: center; justify-content: center;
+            height: 100%; width: 110%; display: flex; background: rgb(255, 255, 255);
+        }
+        .produto-container-img{ 
+            display: flex; justify-content: center; padding-right: 1rem;
+        }
+
+
+
+
+
+
+
+
+
+                /* esquerda */
+
+
+
+                @media screen and (max-width: 925px) {
+                        .produto-cp-cp{
+                            width: 11rem; height: 15rem;
+                            .carrinho{
+
+                                z-index: 1; z-index: 10; position: absolute; top: 0; right: 0; bottom: 1; left: 1; width: 50px; height: 30px; display: none; display: none; align-items: center; justify-content: center; margin-top: 10px;
+
+                                a{
+
+                                    background: var(--cor1); width: 50%; height: 3rem; border-radius: 100%;box-shadow: 0px 0px 10px 1px rgb(245, 243, 243);
+
+                                    img{
+
+                                        width: 30%;
+
+                                    }
+                        }
+                    }
+
+                            div{
+                                height: 100%;
+
+                                .card-body{
+                                    height: 30%;
+                                    .card-text{
+                                    height: 79%; font-size: 10px; overflow: hidden;
+                                    span{
+                                        font-size: 1.3rem; overflow: hidden; font-weight: 700;
+                                    }
+
+
+                                }
+                                    a{
+                                        width: 80%; background: var(--cor2); height: 2rem;; display: flex; justify-content: center; font-weight: 500;
+                                        margin-bottom: .5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    </style>
+</head>
+<body>
+    <div class="background-cadastro-produto">
+        <form action="">
+            <div class="close-background-cadastro-produto">
+                <span>Cadastrar produto</span>
+                <button class="bttn-close-cp">X</button>
+            </div>
+            <div class="form-container">
+                <div class="img-produto">
+                    <div class="produto-container-img">
+                        
+                   
+                        <div class="produto-card" aria-disabled="true">
+                            <div class="carrinho-outros">
+                                <button disabled><img src="/img/carrinho-de-compras.png" alt=""></button>
+                            </div>
+                            <div class="produto-container-card">
+                                <div class="img-card-produto">
+                                    <img src="/img/img-produto/tadala.png" alt="">
+                                </div>
+                                <div class="container-card-produto">
+                                    <span>Absorvente Intimus® Noturno Suave com </span>
+                                </div>
+                                <div class="valor-produto-card">$19,99</div>
+                                <div class="button-produto-card" >
+                                    <button disabled>comprar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="crc-produto">
+                    <div class="left-crc-produto">
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Código de Barra:</label>
+                            <input class="item-left-crc-produto-input" id="codigodebarra" type="text" name="nome-do-produto">
+                        </div>
+
+                        
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Lista:</label>
+                            <input class="item-left-crc-produto-input" id="lista" type="text" name="nome-do-produto">
+                        </div>
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Fracionar:</label>
+                            <input class="item-left-crc-produto-input" id="fracionar" type="text" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Custo unitário:</label>
+                            <input class="item-left-crc-produto-input" id="custounitario" type="text" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Mark-up:</label>
+                            <input class="item-left-crc-produto-input" id="mark-up" type="text" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">PMC:</label>
+                            <input class="item-left-crc-produto-input" id="pmc" type="text" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Apresentação:</label>
+                            <input class="item-left-crc-produto-input" id="apresentacao" type="text" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Gênero:</label>
+                            <input class="item-left-crc-produto-input" id="genero" type="text" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Substâncias:</label>
+                            <input class="item-left-crc-produto-input" id="substancias" type="text" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Tipo:</label>
+                            <input class="item-left-crc-produto-input" type="text" id="tipo" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Fragrância:</label>
+                            <input class="item-left-crc-produto-input" type="text" id="fragrancia" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Quantidade:</label>
+                            <input class="item-left-crc-produto-input" type="text" id="quantidade" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Parte do Corpo:</label>
+                            <input class="item-left-crc-produto-input" type="text" id="partedocorpo" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Tipos de Pele:</label>
+                            <input class="item-left-crc-produto-input" type="text" id="tiposdepele" name="nome-do-produto">
+                        </div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Fases da Vida:</label>
+                            <input class="item-left-crc-produto-input" type="text" id="fasesdavida" name="nome-do-produto">
+                        </div>
+
+                       
+
+                    </div>
+                    <div class="right-crc-produto">
+
+                        
+
+                        
+                        <div class="item-left-crc-produto">
+                            <label class="item-left-crc-produto-label" for="">Nome do Produto:</label>
+                            <input class="item-left-crc-produto-input" type="text" id="nomedoproduto" name="nome-do-produto">
+                        </div>
+                        
+                        <div class="item-left-crc-produto" style="height: 8rem;margin-top: 1rem;">
+                            <label class="item-left-crc-produto-label" for="">Descrição Resumida:</label>
+                            <textarea class="item-left-crc-produto-input" id="descricaoresumida" rows="4" cols="40" name="nome-do-produto"></textarea>
+                        </div>
+
+
+                        
+                        <div class="item-left-crc-produto" style="margin-top: 1rem;">
+                            <label class="item-left-crc-produto-label" for="">Titulo da Descrição Completa:</label>
+                            <input class="item-left-crc-produto-input" type="titutlodadescricaoresumida" name="nome-do-produto">
+                        </div>
+
+                        <div class="item-left-crc-produto" style="height: 8rem; margin-top: 1rem;">
+                            <label class="item-left-crc-produto-label" for="">Descrição Completa:</label>
+                            <textarea class="item-left-crc-produto-input" id="descricaocompleta" rows="4" cols="40" name="nome-do-produto"></textarea>
+                        </div>
+                        <div class="image-produto-cp" style="width: 90%; height: 400px; margin-block: 1rem; border: #8f0804 1px solid;"></div>
+
+                        
+                        <div class="item-left-crc-produto">
+                            <button class="salvar-bttn" style="height: 100%;">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN || ENTRE EM JUCA</title>
+    <link rel="stylesheet" href="/css/LOGAR-CSS-KJZXHCV/style-acces-register-user.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <header>
+        <section class="header-container">
+            <section class="logo"><a href="\index.html"><img src="\img/logo/logo2.png" width="120px" alt=""></a></section>
+        </section>
+    </header>
+
+    <main>
+        <form onclick="return validarascoisas()">
+            <div class="title-div">
+                <div class="title">
+                    <!-- <img src="\img/do-utilizador.png" alt=""> -->
+                    <h2>criar cadastro</h2>
+                </div>
+                <p style="text-align: center;">Veja seus pedidos de forma fácil, compre mais rápido e tenha uma experiência personalizada :)</p>
+                <div class="int-lab"><strong>*</strong> campos obrigatórios</div>
+            </div>
+
+            <div class="div-login">
+                <div class="label-div">
+                    <label for="nome-cadastro"><strong>*</strong> nome completo</label>
+                </div>
+                <div class="input-div">
+                    <input class="amanda" name="nome-cadastro" type="text" placeholder="Ex: Pedro Gustavo" required maxlength="30">
+                </div>
+                <span class="alert-aviso"></span>
+            </div>
+
+            <div class="div-login">
+                <div class="label-div" style=" display: flex; justify-content: center; flex-direction: column; height: 4rem;">
+                    <label for="genero-cadastro"><strong>*</strong> gênero</label>
+                    <span class="int-lab">pra gente te conhecer um pouquinho melhor :)</span>
+                </div>
+                <div class="input-div" style="display: flex; align-items: center; justify-content: center;">
+  
+                    <input  class="label-div" style="width: 15px;" type="radio" id="masculino" name="genero-cadastro" value="masculino">
+                    <label class="label-div" for="masculino" style="margin: 0; padding: 0; width: 30%; font-size: 11px; padding-left: 4px; text-align: center;">Masculino</label>
+                    
+
+  
+                    <input  class="label-div" style="width: 15px;" type="radio" id="feminino" name="genero-cadastro" value="feminino">
+                    <label  class="label-div" for="feminino" style="margin: 0; padding: 0; width: 30%; font-size: 11px; padding-left: 4px;">Feminino</label>
+                    
+
+  
+                    <input   class="label-div" style="width: 15px;" type="radio" id="outro" name="genero-cadastro" value="outro">
+                    <label  class="label-div" for="outro"style="margin: 0; padding: 0; width: 20%; font-size: 11px; padding-left: 4px;">Outros</label>
+                    
+
+                </div>
+                <span class=""></span>
+            </div>
+
+            <div class="div-login">
+                <div class="label-div">
+                    <label for="nascimento-cadastro"><strong>*</strong> data de nascimento</label>
+                </div>
+                <div class="input-div">
+                    <input class="amanda" style="width: 40%;" type="date" required name="nascimento-cadastro">
+                </div>
+                <span class="alert-aviso"></span>
+            </div>
+
+            <div class="div-login">
+                <div class="label-div">
+                    <label for="cpf-cadastro"><strong>*</strong> CPF</label>
+                </div>
+                <div class="input-div">
+                    <input class="amanda" style="width: 125px;" type="number" required placeholder="000 . 000 . 000 - 00" mask="999.999.999-99" maxlength="14" name="cpf-cadastro" >
+                </div>
+                <span class="alert-aviso"></span>
+            </div>
+
+            <div class="div-login">
+                <div class="label-div">
+                    <label for="tel-cadastro"><strong>*</strong> telefone</label>
+                </div>
+                <div class="input-div">
+                    <input class="amanda" style="width: 100px;" type="tel" required name="tel-cadastro" placeholder="(__) _____-____">
+                </div>
+                <span class="alert-aviso"></span>
+            </div>
+
+            <div class="div-login">
+                <div class="label-div" style="display: flex; justify-content: center; flex-direction: column; height: 4rem;" >
+                    <label for="email-cadastro"><strong>*</strong> e-mail</label>
+                    <span  class="int-lab">informe um e-mail válido.</span>
+                    <!-- <a href="#">redefinir senha</a> -->
+                </div>
+                <div class="input-div" >
+                    <input class="amanda" type="email" required name="email-cadastro" id="email-cadastro">
+                </div>
+                <span class="alert-aviso"></span>
+            </div>
+
+            <div class="div-login">
+                <div class="label-div" style="display: flex; justify-content: center; flex-direction: column; height: 4rem;">
+                    <label for="password-cadastro" ><strong>*</strong> senha</label>
+                    <span  class="int-lab">precisa ter entre 8 e 20 caracteres</span>
+                </div>
+                <div class="input-div">
+                    <input class="amanda" type="password" required minlength="8" id="password-cadastro" name="password-cadastro">
+                </div>
+                <span class="alert-aviso"></span>
+            </div>
+
+            <div class="div-login">
+                <div class="label-div" style="display: flex; justify-content: center; flex-direction: column; height: 4rem;" >
+                    <label for="confirm-password-cadastro"><strong>*</strong> confirmar senha</label>
+                    <span  class="int-lab">precisa ter entre 8 e 20 caracteres</span>
+                </div>
+                <div class="input-div">
+                    <input class="amanda" type="text" required minlength="8" id="confirm-password-cadastro" name="confirm-password-cadastro">
+                </div>
+                <span class="alert-aviso" ></span>
+            </div>
+
+            <div class="btn-login" style="display: flex; flex-direction: column; margin-top: 4rem; justify-content: center;">
+                <button class="continuar" style="margin-bottom: 1rem; color: white;">Continuar</button><!-- onclick="validar_cadastro()" -->
+                <button type="reset" style=" background: rgb(0, 195, 255); color: #ffffff; border: #4dc4d5 solid 1px; font-weight: 700;">resetar</button>
+            </div>
+            <div class="cadastre-se-aqui" style="padding-bottom: 1rem; ">
+                <p style="font-size: 11px; text-align: center;">Não se preocupe, nosso site é seguro! Ao criar o seu cadastro, você concorda com a nossa <a href="/paginas/CADASTRE-SE/cadastre-se-entre-em-juca.html">política de privacidade.</a></p>
+            </div>
+            <div class="cadastre-se-aqui" style=" padding-bottom: 2rem; ">
+                <p style="font-size: 15px;">já tem cadastro? <a href="/paginas/Logue-entre-em-juca.html">entrar</a></p>
+            </div>
+        </form>
+    </main>
+
+
+
+    <script src="/js/LOGAR-JS-KOIJJZXHCV/validar_register.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDgjVLpBe79MH_VQ2V3pdmVn3Uy7EnJRqo",
+            authDomain: "jucapharma123.firebaseapp.com",
+            projectId: "jucapharma123",
+            storageBucket: "jucapharma123.appspot.com",
+            messagingSenderId: "349852660696",
+            appId: "1:349852660696:web:6fa4ce5dfc165c189bf8ad"
+        };
+        
+        firebase.initializeApp(firebaseConfig); 
+        </script>
+</body>
+</html>

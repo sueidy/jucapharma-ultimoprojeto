@@ -1,0 +1,15 @@
+.imagePreview {
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Para garantir que a imagem não ultrapasse os limites da div */
+    }
+
+    .imagePreview img {
+        max-width: 100%; /* Para garantir que a imagem não ultrapasse os limites da div */
+        max-height: 100%; /* Para garantir que a imagem não ultrapasse os limites da div */
+    }
